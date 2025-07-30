@@ -29,7 +29,7 @@ This fork is **non-commercial** and fully credits the original authors, in compl
 ### Prerequisites
 
 - Windows 10/11 (x64)
-- Gun4IR device or any compatible serial interface
+- Revolv || Gun4IR device or any compatible serial interface
 - Serial ports properly assigned in `config/config.json`
 
 ---
