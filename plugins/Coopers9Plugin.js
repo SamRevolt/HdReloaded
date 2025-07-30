@@ -1,3 +1,14 @@
+/**
+ * Cooper's 9 Arcade FeedbackPlugin v1.0 - Plugin for HdReloaded
+ * --------------------------------------
+ * Author: SamRevolt
+ * First Release: 10 July 2025
+ *
+ * This plugin enables LightGun feedback (Recoil & Rumble on damage) for both players.
+ * Compatible with TeknoParrot and JConfig.
+ * Memory addresses are retrieved via an external DLL.
+ */
+
 const { Plugin } = require('./plugin');
 const { TYPE } = require('../core/memoryHelpers');
 const getMem2Base = require('../core/Coopers9.MemoryHook'); // charge le module externe
@@ -25,8 +36,8 @@ class Coopers9Plugin extends Plugin {
                 } else if (result && result.BaseAddress && result.PlayerOffsets) {
                     this.#gameBaseAddr = result.BaseAddress;
                     this.#playerOffsets = result.PlayerOffsets;
-                    console.log(`[Coopers 9] base address (via DLL) found @ 0x${this.#gameBaseAddr.toString(16)}`);
-                    console.log(`[Coopers 9] player offsets loaded:`, this.#playerOffsets);
+                    console.log(`[Coopers 9] base address (via DLL) found`);
+                    console.log(`[Coopers 9] player offsets loaded:`);
                 } else {
                     if (!this._warnedNoBaseAddr) {
                         console.warn('[Coopers 9] base address or offsets not found (DLL), will retry...');
