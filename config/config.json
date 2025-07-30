@@ -1,0 +1,57 @@
+{
+    "players": ["COM1","COM2","COM3","COM4"],
+    "delay": 0,
+    "rumbleOnHook": false,
+    "preconnect": false,
+    "quitAfterUnhook": false,
+    "hooks": [
+        { "rom": "lamachin", "plugin": "lamachin.js", "config": {}, "key": "lamachin" },
+        { "rom": "tha", "plugin": "tha.js", "config": {}, "key": "tha" },
+        { "rom": "Operation G.H.O.S.T", "plugin": "opghost-ob.js", "config": {}, "key": "opghost" },
+        { "rom": "Let's Go Island 3D", "plugin": "lgi3d-ob.js", "config": {}, "key": "lgi3d" },
+        { "rom": "hodsd", "plugin": "demulshooter-custom.js", "config": {}, "key": "hodsd" },
+        { "rom": "vcop3", "plugin": "demulshooter-generic.js", "config": {}, "key": "vcop3" },
+        { "rom": "confmiss", "plugin": "demulshooter-generic.js", "config": {}, "key": "confmiss" },
+        { "rom": "hotd2", "plugin": "demulshooter-generic.js", "config": {}, "key": "hotd2" },
+        { "rom": "hotd", "plugin": "demulshooter-generic.js", "config": {}, "key": "hotd" },
+        { "rom": "vcop2", "plugin": "demulshooter-generic.js", "config": {}, "key": "vcop2" },
+        { "rom": "sgg", "plugin": "demulshooter-generic.js", "config": {}, "key": "sgg" },
+        { "rom": "wws", "plugin": "demulshooter-generic.js", "config": {}, "key": "wws" },
+        { "rom": "rha", "plugin": "demulshooter-custom.js", "config": { "players": ["COM3","COM1","COM2","COM4"] }, "key": "rha" },
+        { "rom": "tra", "plugin": "demulshooter-custom.js", "config": { "players": ["COM3","COM1","COM2","COM4"] }, "key": "tra" },
+        { "rom": "gunblade", "plugin": "demulshooter-generic.js", "config": { "autofireHold": 40, "autofirePause": 74 }, "key": "gunblade" }
+    ],
+    "apps": [
+        { "app": "BudgieLoader.exe", "title": "House of the Dead", "plugin": "hotd4.js", "config": {}, "key": "hotd4" },
+        { "app": "BudgieLoader.exe", "title": "FREEGLUT", "plugin": "hotd4.js", "config": {}, "key": "hotd4" },
+        { "app": "BudgieLoader.exe", "title": "TeknoBudgie - Terminator Salvation", "plugin": "ts.js", "config": {}, "key": "ts" },
+        { "app": "BudgieLoader.exe", "title": "TeknoParrot - Jurassic Park Arcade", "plugin": "jpa.js", "config": {}, "key": "jpa" },
+        { "app": "TimeCrisisGame-Win64-Shipping.exe", "title": "TimeCrisis Game", "plugin": "tc5.js", "config": { "gameDelay": 0 }, "key": "tc5" },
+        { "app": "RSLauncher.exe", "title": "TimeCrisis Game", "plugin": "tc5.js", "config": {}, "key": "tc5" },
+        { "app": "supermodel.exe", "title": "Supermodel - The Lost World", "plugin": "lostwsga.js", "config": { "gameDelay": 0 }, "key": "lostwsga" },
+        { "app": "mame.exe", "title": "Point Blank (World, GN2 Rev B, set 1) [ptblank] - MAME 0.244 (LLP64)", "plugin": "ptblank.js", "config": { "gameDelay": 0 }, "key": "ptblank" },
+        { "app": "mame.exe", "title": "Point Blank 2 (GNB5/VER.A) [ptblank2] - MAME 0.244 (LLP64)", "plugin": "ptblank2.js", "config": { "gameDelay": 0 }, "key": "ptblank2" },
+        { "app": "mame.exe", "title": "Vs. Duck Hunt (set DH3 E) [duckhunt] - MAME 0.244 (LLP64)", "plugin": "duckhunt.js", "config": { "gameDelay": 0 }, "key": "duckhunt" },
+        { "app": "mame.exe", "title": "Bang! [bang] - MAME 0.244 (LLP64)", "plugin": "bang.js", "config": { "gameDelay": 0 }, "key": "bang" },
+        { "app": "mame.exe", "title": "Time Crisis (Rev. TS2 Ver.B, World) [timecris] - MAME 0.244 (LLP64)", "plugin": "timecris.js", "config": { "gameDelay": 0 }, "key": "timecris" },
+        { "app": "notepad.exe", "title": "test", "plugin": "notepad.js", "config": {}, "key": "notepad" },
+        { "app": "gs2-2.exe", "title": "scene", "plugin": "_X_opghost.js", "config": {}, "key": "opghost" },
+        { "app": "rpcs3-gun.exe", "title": "Deadstorm Pirates", "plugin": "deadstorm.js", "config": {}, "key": "deadstorm" }
+    ],
+    "custom": [
+        { "app": "Retroarch.exe", "title": "duckhunt", "plugin": "duckhunt.js", "config": {}, "key": "duckhunt" },
+        { "app": "Another.exe", "title": "anothergame", "plugin": "anothergame.js", "config": {}, "key": "anothergame" }
+    ],
+    "nes": [
+        { "app": "Retroarch.exe", "title": "duckhunt", "plugin": "nes_duckhunt.js", "config": {}, "key": "duckhunt" }
+    ],
+	"fceumm_libretro": [
+        { "app": "Retroarch.exe", "title": "duckhunt", "plugin": "fceumm_libretro_duckhunt.js", "config": {}, "key": "duckhunt" }
+    ],
+	"dolphin": [
+        { "app": "Dolphin.exe", "title": "ghostsquad", "plugin": "dolphin_ghostsquad.js", "config": {}, "key": "ghostsquad" }
+    ],
+	"konami": [
+        { "app": "Game.exe", "title": "coopers9", "plugin": "coopers9plugin.js", "config": {}, "key": "coopers9" }
+    ]
+}

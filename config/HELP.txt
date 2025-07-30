@@ -1,0 +1,41 @@
+Config Parameters
+
+Note: config is in JSON format (https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON),
+which is basically a hell of a lot easier to read than XML.
+
+For newbies, you may want to familiarize yourself with the following:
+[] means array
+{} means object
+"" means you are putting text in there
+true/false for boolean
+numbers are just numbers
+
+Otherwise, here is the API for the config file:
+
+players: an array of COM ports for players 1, 2, 3, 4, etc.
+deviceType: "com" (or delete this line completely) for com communication. "web" is an option but probably only for hardcore devs, and not for gun games.
+delay: number : if your TV is a bit delayed, you can enter a number here (milliseconds) to delay outputs
+rumbleOnHook: true/false, will rumble the guns for 200ms when an app is loaded and the gun gets hooked
+preconnect: will attach NGO to your COM ports immediately when NGO is run. may be needed for time crisis 5 when using with TP if you use COM1 for your gun port.
+quitAfterUnhook: will automatically close NGO after NGO detects that a targeted app has closed.
+
+apps: an array (list) of targeted windows/exe files/etc that plugins who need to read memory use. you won't add to this list unless you write your own plugin for a game. You can have multiple entries
+      for the same plugin since fullscreen vs windowed versions may have different titles, etc.
+      anything under "apps" waits for the process info to be detected to hook (or unhook your guns on exit)
+
+apps object:
+    app: exe file to detect
+    title: window title. If not specified, it won't care. If specified, it must be some text that appears in the window title. AHK Window Spy is your best friend.
+    plugin: js file to use
+    config: any additional config you want to specify, such as gameDelay -- similar to delay (above) but can be set for this game itself
+    key: a unique piece of text that identifies the game itself -- it can be used by you when adding overrides to the overrides folder (on launch, on exit, etc.)
+
+hooks: an array (list) of MAMEHOOKER OR MAMEHOOKER-COMPATIBLE OUTPUTS (output blaster, for example) to listen for. You can probably add a ton of games to this list by using the included generic plugins.
+      anything under "hooks" waits for the "rom" to be launched as notified by your output software
+
+hooks object:
+    rom: name of mamehooker output
+    plugin: js file to use
+    config: any additioanl config you want to specify - some plugins support players: [] which allows you to override player order (maybe you want to do p3, p1, p2, p4 for 4p games?)
+            - the demulshooter generic plugins also support changing your default autofireHold and autofirePause timings
+    key: a unique piece of text that identifies the game itself -- it can be used by you when adding overrides to the overrides folder (on launch, on exit, etc.)
