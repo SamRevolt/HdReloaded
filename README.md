@@ -26,11 +26,14 @@ This fork is **non-commercial** and fully credits the original authors, in compl
 
 ---
 
-### Prerequisites
+## Prerequisites
 
 - Windows 10/11 (x64)
-- Revolv || Gun4IR device or any compatible serial interface
-- Serial ports properly assigned in `config/config.json`
+- Revolv (custom device by SamRevolt) or Gun4IR (by Jaybee)
+- Any compatible device using the same serial protocol
+- Serial ports properly assigned in config/config.json
+
+*Revolv is a personal project by SamRevolt. Gun4IR is developed by Jaybee.*
 
 ---
 
